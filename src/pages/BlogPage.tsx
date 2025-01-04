@@ -22,10 +22,12 @@ const BlogPage: React.FC = () => {
     getBlogPosts();
   }, []);
 
+  console.log('BLOG POST ', blogPosts)
+
   return (
-    <Box sx={{ py: 4 }}>
+    <Box sx={{ py: 4, marginTop: '150px'}}>
       <Container maxWidth="md">
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h1" align="center" gutterBottom sx={{ color: '#5E9050', fontWeight: 'bold', fontSize: '40px' }}>
           Blog
         </Typography>
         <Grid container spacing={4}>
@@ -34,14 +36,14 @@ const BlogPage: React.FC = () => {
               <Card>
                 <CardMedia
                   component="img"
-                  height="200"
-                  image={post.imageUrl}
+                  height="400"
+                  image={`http://localhost:1337${post.imageUrl}`}
                   alt={post.title}
                 />
                 <CardContent>
                   <Typography variant="h5">{post.title}</Typography>
                   <Typography variant="body2">{post.shortDescription}</Typography>
-                  <Button href={`/blog/${post.id}`} variant="contained" color="primary">
+                  <Button href={`/blogdetail/${post.id}`} variant="contained" color="primary">
                     Mehr erfahren
                   </Button>
                 </CardContent>

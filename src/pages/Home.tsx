@@ -1,35 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import Hero from '../components/Hero';
-//import AboutMe from '../components/AboutMe';
 import Offer from '../components/Offer';
-import Reviews from '../components/Reviews';
-import { fetchAboutMe, fetchOffers, fetchReviews } from '../services/api';
+import Header from '../components/Header';
+import AboutMe from '../components/AboutMe';
+import ReviewCarousel from '../components/ReviewCarousel';
+import GameBoard from '../game/GameBoard';
+//import { fetchOffers, fetchReviews } from '../services/api';
 
 const Home: React.FC = () => {
   const [aboutMe, setAboutMe] = useState<string>('');
   const [offers, setOffers] = useState<string>('');
   const [reviews, setReviews] = useState<any[]>([]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     const fetchData = async () => {
-      const aboutMeData = await fetchAboutMe();
-      const offersData = await fetchOffers();
-      const reviewsData = await fetchReviews();
+      //const aboutMeData = await fetchAboutMe();
+      //const offersData = await fetchOffers();
+      //const reviewsData = await fetchReviews();
 
-      setAboutMe(aboutMeData.text);
-      setOffers(offersData.text);
-      setReviews(reviewsData);
+      //setAboutMe(aboutMeData.text);
+      //setOffers(offersData.text);
+      //setReviews(reviewsData);
     };
 
-    fetchData();
-  }, []);
+    //fetchData();
+  }, []);*/
 
   return (
     <div>
       <Hero />
-      {/*<AboutMe text={aboutMe} />*/}
-      <Offer text={offers} />
-      <Reviews reviews={reviews} />
+      <AboutMe/>
+      <Offer/>
     </div>
   );
 };
