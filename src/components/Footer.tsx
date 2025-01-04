@@ -11,18 +11,18 @@ const Footer: React.FC = () => {
             <Typography variant="h6" gutterBottom>
               Bleiben Sie verbunden
             </Typography>
-            <IconButton color="inherit" href="https://facebook.com">
+            {/*<IconButton color="inherit" href="https://facebook.com">
               <Facebook />
             </IconButton>
             <IconButton color="inherit" href="https://twitter.com">
               <Twitter />
-            </IconButton>
+            </IconButton>*/}
             <IconButton color="inherit" href="https://instagram.com">
               <Instagram />
             </IconButton>
-            <IconButton color="inherit" href="https://linkedin.com">
+            {/*<IconButton color="inherit" href="https://linkedin.com">
               <LinkedIn />
-            </IconButton>
+            </IconButton>*/}
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant="h6" gutterBottom>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
         </Grid>
         <Box sx={{ textAlign: 'center', mt: 4 }}>
           <Typography variant="body2">
-            © {new Date().getFullYear()} Dein Coach. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Pia Martocchi. Alle Rechte vorbehalten.
           </Typography>
         </Box>
       </Container>

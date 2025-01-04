@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Typography, Container, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
 import { fetchBlogPosts } from '../services/api';
+import { Link } from "react-router-dom";
 
 interface BlogPost {
   id: number;
@@ -22,9 +23,9 @@ const Blog: React.FC = () => {
   }, []);
 
   return (
-    <Box sx={{ py: 4 }}>
+    <Box sx={{ py: 4, marginTop: '100px' }}>
       <Container maxWidth="md">
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h1" gutterBottom>
           Blog
         </Typography>
         <Grid container spacing={4}>
@@ -40,7 +41,7 @@ const Blog: React.FC = () => {
                 <CardContent>
                   <Typography variant="h6">{post.title}</Typography>
                   <Typography variant="body2">{post.shortDescription}</Typography>
-                  <Button href={`/blog/${post.id}`} variant="contained" color="primary" sx={{ mt: 2 }}>
+                  <Button href={`/blogdetail/${post.id}`} variant="contained" color="primary" sx={{ mt: 2 }}>
                     Mehr erfahren
                   </Button>
                 </CardContent>
