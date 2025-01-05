@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_URL = 'https://pia.tracht-digital.de/api';
-const BASE_URL = 'https://pia.tracht-digital.de:80';
+const BASE_URL = 'https://pia.tracht-digital.de';
 
 export const fetchBlogPosts = async () => {
   const response = await axios.get(`${API_URL}/blog-posts/?populate=*`);
