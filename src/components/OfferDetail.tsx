@@ -3,7 +3,7 @@ import { Box, Container, Typography, CardMedia, Button, CircularProgress } from 
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = 'https://pia-web.tracht-digital.de/api'; // Basis-URL
+const API_URL = 'https://pia.tracht-digital.de/api'; // Basis-URL
 
 interface Offer {
   id: number;
